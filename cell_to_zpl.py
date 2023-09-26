@@ -8,8 +8,8 @@ def parse_custom_syntax(file_content):
     cols = int(dimensions[1])
 
     # 假設每個單元格的大小為100x100像素
-    cell_width = 80
-    cell_height = 80
+    cell_width = 100
+    cell_height = 100
 
     zpl_commands = []
 
@@ -41,8 +41,7 @@ def parse_custom_syntax(file_content):
 
             # 如果有文字，則添加文字
             if len(parts) > 1 and "txt:" in parts[1]:
-                text_parts = parts[1].split(" ")
-                text = text_parts[1].strip().strip('"')
+                text = parts[1].split("txt:")[1].split("xShift:")[0].strip().strip('"')
                 xShift = 0
                 yShift = 0
                 if "xShift:" in line:

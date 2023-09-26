@@ -1,6 +1,6 @@
 10x10
 
-cell: 1,1-1,10 | txt: "測試中文" xShift:-20
+cell: 1,1-1,10 | txt: "測試中文" xShift:-20 yShift:-20
 
 cell: 2,1-2,2
 cell: 2,3-2,5
